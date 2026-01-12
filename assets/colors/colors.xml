@@ -4,6 +4,12 @@
 <color name="scaffoldBackgroundColor">#FF111111</color>
 <color name="cFFFFFF">#FFFFFFFF</color>
 <color name="c000000">#FF000000</color>
+<color name="cfefefe">#FFfefefe</color>
+<color name="cb20000">#FFb20000</color>
+<color name="cF0F0F0">#FFF0F0F0</color>
+<color name="c3c3c3c">#FF3c3c3c</color>
+<color name="cc6c6c6">#FFc6c6c6</color>
+<color name="c727272">#FF727272</color>
 
 
 </colors>
