@@ -80,7 +80,7 @@ class CustomElevatedButton extends StatelessWidget {
                               style:
                                   (textStyle ??
                                           TextFontStyle
-                                              .headline16w500cFFFFFFStyleLora)
+                                              .headline16w600cFFFFFFStyleLora)
                                       .copyWith(
                                         color: isDisabled
                                             ? AppColors.cFFFFFF.withOpacity(0.6)

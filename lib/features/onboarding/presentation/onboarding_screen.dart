@@ -8,6 +8,7 @@ import 'package:movie_rating_application/features/onboarding/presentation/widget
 import 'package:movie_rating_application/gen/assets.gen.dart';
 import 'package:movie_rating_application/helper/ui_helpers.dart';
 
+import '../../../custom_widgets/app_logo_widget.dart';
 import '../../../custom_widgets/custom_go_back_button.dart';
 import '../../../gen/colors.gen.dart';
 
@@ -39,12 +40,7 @@ class OnboardingScreen extends StatelessWidget {
                           );
                   }),
                   UIHelper.horizontalSpace(8.w),
-                  Image.asset(
-                    Assets.images.appMiniIcon.path,
-                    height: 40,
-                    width: 70,
-                    fit: BoxFit.contain,
-                  ),
+                  AppLogoWidget(),
                 ],
               ),
               UIHelper.verticalSpace(40.h),

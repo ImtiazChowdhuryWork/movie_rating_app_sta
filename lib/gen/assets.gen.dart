@@ -30,11 +30,29 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/check_box_selected_icon.svg
+  String get checkBoxSelectedIcon => 'assets/icons/check_box_selected_icon.svg';
+
+  /// File path: assets/icons/eye open.svg
+  String get eyeOpen => 'assets/icons/eye open.svg';
+
+  /// File path: assets/icons/face_book_icon.svg
+  String get faceBookIcon => 'assets/icons/face_book_icon.svg';
+
+  /// File path: assets/icons/google_icon.svg
+  String get googleIcon => 'assets/icons/google_icon.svg';
+
   /// File path: assets/icons/home_icon.svg
   String get homeIcon => 'assets/icons/home_icon.svg';
 
   /// List of all assets
-  List<String> get values => [homeIcon];
+  List<String> get values => [
+    checkBoxSelectedIcon,
+    eyeOpen,
+    faceBookIcon,
+    googleIcon,
+    homeIcon,
+  ];
 }
 
 class $AssetsImagesGen {
