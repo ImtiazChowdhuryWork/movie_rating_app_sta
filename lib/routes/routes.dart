@@ -2,15 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movie_rating_application/features/auth/sign_in/presentation/sign_in_screen.dart';
 
 import '../features/welcome/presentation/welcome_screen.dart';
 
 class Routes {
-
   static const String welcomeScreen = '/';
-
-
-
+  static const String sginInScreen = '/sign_in_screen';
 
   static final appRoutes = [
     ///Splash Screen
@@ -21,16 +19,17 @@ class Routes {
       customTransition: _customTransition(),
       transitionDuration: _duration(),
     ),
+
+    ///Splash Screen
+    GetPage(
+      name: sginInScreen,
+      page: () => SignInScreen(),
+      transition: _transition(),
+      customTransition: _customTransition(),
+      transitionDuration: _duration(),
+    ),
   ];
-
-
 }
-
-
-
-
-
-
 
 /// Custom ultra-fast fade for Android
 class FastFadeTransition extends CustomTransition {
