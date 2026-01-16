@@ -23,7 +23,7 @@ class OnboardingScreenController extends GetxController {
       );
     } else {
       // We're on the last page, navigate to sign-in
-      Get.offAllNamed(Routes.sginInScreen);
+      Get.offAllNamed(Routes.signInScreen);
     }
   }
 
