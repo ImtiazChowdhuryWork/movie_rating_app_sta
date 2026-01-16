@@ -86,6 +86,13 @@ class TextFontStyle {
     fontSize: 14.sp,
     fontWeight: FontWeight.w400,
   );
+  static final headline24w500cC4C4C4StyleQuicksand = TextStyle(
+    fontFamily: 'Quicksand',
+    fontFamilyFallback: const ['Lora', 'Franchise'],
+    color: AppColors.cC4C4C4,
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w500,
+  );
   static final headline16w600cC4C4C4StyleLora = TextStyle(
     fontFamily: 'Lora',
     fontFamilyFallback: const ['Quicksand', 'Franchise'],

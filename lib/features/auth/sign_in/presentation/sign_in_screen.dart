@@ -99,7 +99,7 @@ class SignInScreen extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       LoggerUtils.debug("ForgotPassword Button Taped!");
-                      // Get.toNamed(Routes.forgotPasswordScreen);
+                      Get.toNamed(Routes.forgotPasswordScreen);
                     },
                     child: Text(
                       "Forgot Password?",

@@ -143,7 +143,7 @@ class SignUpScreen extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: "New User? ",
+                        text: "Already have an account? ",
                         style: TextFontStyle.headline14w400cFDFDFDStyleLora,
                       ),
                       WidgetSpan(
@@ -151,10 +151,10 @@ class SignUpScreen extends StatelessWidget {
                         child: InkWell(
                           onTap: () {
                             LoggerUtils.debug("Button Taped : SignUp!");
-                            Get.toNamed(Routes.signUpScreen);
+                            Get.toNamed(Routes.signInScreen);
                           },
                           child: Text(
-                            "Sign up",
+                            "Login",
                             style: TextFontStyle.headline16w500cc53412StyleLora,
                           ),
                         ),

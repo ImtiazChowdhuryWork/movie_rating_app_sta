@@ -2,15 +2,21 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movie_rating_application/features/auth/reset_password/presentation/reset_password_screen.dart';
 import 'package:movie_rating_application/features/auth/sign_in/presentation/sign_in_screen.dart';
 import 'package:movie_rating_application/features/auth/sign_up_screen/presentation/sign_up_screen.dart';
 
+import '../features/auth/forgot_password/presentation/forgot_password_screen.dart';
+import '../features/auth/otp_validation/presentation/otp_validation_screen.dart';
 import '../features/welcome/presentation/welcome_screen.dart';
 
 class Routes {
   static const String welcomeScreen = '/';
   static const String signInScreen = '/sign_in_screen';
   static const String signUpScreen = '/sign_up_screen';
+  static const String forgotPasswordScreen = '/forgot_password_screen';
+  static const String otpValidationScreen = '/otp_validation_screen';
+  static const String resetPasswordScreen = '/reset_password_screen';
 
   static final appRoutes = [
     ///Splash Screen
@@ -35,6 +41,33 @@ class Routes {
     GetPage(
       name: signUpScreen,
       page: () => SignUpScreen(),
+      transition: _transition(),
+      customTransition: _customTransition(),
+      transitionDuration: _duration(),
+    ),
+
+    ///ForgotPassword Screen
+    GetPage(
+      name: forgotPasswordScreen,
+      page: () => ForgotPasswordScreen(),
+      transition: _transition(),
+      customTransition: _customTransition(),
+      transitionDuration: _duration(),
+    ),
+
+    ///Verify OTP Screen
+    GetPage(
+      name: otpValidationScreen,
+      page: () => OtpValidationScreen(),
+      transition: _transition(),
+      customTransition: _customTransition(),
+      transitionDuration: _duration(),
+    ),
+
+    ///Verify OTP Screen
+    GetPage(
+      name: resetPasswordScreen,
+      page: () => ResetPasswordScreen(),
       transition: _transition(),
       customTransition: _customTransition(),
       transitionDuration: _duration(),
