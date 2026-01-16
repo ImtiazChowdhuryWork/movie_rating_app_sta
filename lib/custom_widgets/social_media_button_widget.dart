@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:movie_rating_application/gen/colors.gen.dart';
 
-import '../../../../../constants/text_font_style.dart';
-import '../../../../../gen/assets.gen.dart';
-import '../../../../../helper/ui_helpers.dart';
+import '../constants/text_font_style.dart';
+import '../gen/assets.gen.dart';
+import '../helper/ui_helpers.dart';
 
 class SocialMediaButtonWidget extends StatelessWidget {
   final String title;
@@ -33,7 +33,7 @@ class SocialMediaButtonWidget extends StatelessWidget {
             Expanded(child: Divider()),
           ],
         ),
-        UIHelper.verticalSpace(16.h),
+        UIHelper.verticalSpace(24.h),
 
         ///Section : -----------------///Social Media Button -> Facebook//----------------
         ///Section : -----------------///Social Media Button -> Google//----------------
