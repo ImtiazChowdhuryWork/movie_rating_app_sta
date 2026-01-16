@@ -1,6 +1,9 @@
 /// OnboardingScreenController.dart
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movie_rating_application/routes/routes.dart';
+
+import '../../../../constants/app_list.dart';
 
 class OnboardingScreenController extends GetxController {
   PageController pageViewController = PageController();
@@ -11,15 +14,16 @@ class OnboardingScreenController extends GetxController {
   }
 
   void goToNextPage() {
-    if (index.value < 2) {
-      // Assuming you have 2 pages (0 and 1)
+    // Check if we're on the last page
+    if (index.value < AppList.onboardingList.length - 1) {
+      // There's a next page available
       pageViewController.nextPage(
         duration: Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
     } else {
-      // Navigate to next screen
-      Get.offAllNamed('/login'); // or your next screen
+      // We're on the last page, navigate to sign-in
+      Get.offAllNamed(Routes.sginInScreen);
     }
   }
 
