@@ -12,7 +12,7 @@ import '../custom_widgets/custom_button.dart';
 import '../gen/colors.gen.dart';
 
 Future<void> setInitValue() async {
-  // appData.writeIfNull(kKeyfirstTime, true);
+  appData.writeIfNull(kKeyfirstTime, true);
   // appData.writeIfNull(kKeySignUpToken, '');
   // appData.writeIfNull(kKeyForgotPasswordToken, '');
   // Only set isLoggedIn to false if no access token exists
@@ -46,10 +46,10 @@ Future<void> setInitValue() async {
   await Future.delayed(const Duration(seconds: 2));
 }
 
-void setInitialLanguagePreference() {
-  appData.writeIfNull(kKeyEnglish, true);
-  appData.writeIfNull(kKeySuthKorean, false);
-}
+// void setInitialLanguagePreference() {
+//   appData.writeIfNull(kKeyEnglish, true);
+//   appData.writeIfNull(kKeySuthKorean, false);
+// }
 
 void showMaterialDialog(BuildContext context) {
   showDialog<bool>(
