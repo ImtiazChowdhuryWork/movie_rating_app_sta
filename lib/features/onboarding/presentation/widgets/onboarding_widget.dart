@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movie_rating_application/constants/text_font_style.dart';
-import 'package:movie_rating_application/gen/assets.gen.dart';
 import 'package:movie_rating_application/helper/ui_helpers.dart';
 
 class OnboardingWidget extends StatelessWidget {
@@ -43,13 +42,13 @@ class OnboardingWidget extends StatelessWidget {
           width: 254.w,
           fit: BoxFit.contain,
         ),
-        UIHelper.verticalSpace(56.h),
+        UIHelper.verticalSpace(50.h),
 
         Expanded(
           child: Text(
             subTitle,
             textAlign: TextAlign.center,
-            style: TextFontStyle.headline12w500cfefefeStyleQuicksand,
+            style: TextFontStyle.headline16w600cC4C4C4StyleLora,
           ),
         ),
       ],
