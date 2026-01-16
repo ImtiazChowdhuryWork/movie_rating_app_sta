@@ -1,17 +1,17 @@
 import 'dart:developer';
-import 'package:bloodfit/constants/app_constant_text.dart';
-import 'package:bloodfit/features/auth/sign_in/data/controller/sign_in_screen_controller.dart';
-import 'package:bloodfit/features/auth/sign_in/data/repository/sign_in_repository.dart';
-import 'package:bloodfit/features/auth/sign_in/presentation/sign_in_screen.dart';
-import 'package:bloodfit/features/onboarding/presentation/onboarding_screen.dart';
-import 'package:bloodfit/features/welcome/presentation/welcome_screen.dart';
-import 'package:bloodfit/helper/helper_methods.dart';
-import 'package:bloodfit/helper/logger_util.dart';
-import 'package:bloodfit/helper/post_login.dart';
-import 'package:bloodfit/navigation_screen.dart';
-import 'package:bloodfit/networks/network_caller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movie_rating_application/constants/app_constant_text.dart';
+import 'package:movie_rating_application/features/auth/sign_in/data/controller/sign_in_screen_controller.dart';
+import 'package:movie_rating_application/features/auth/sign_in/data/repository/sign_in_repository.dart';
+import 'package:movie_rating_application/features/auth/sign_in/presentation/sign_in_screen.dart';
+import 'package:movie_rating_application/features/onboarding/presentation/onboarding_screen.dart';
+import 'package:movie_rating_application/features/welcome/presentation/welcome_screen.dart';
+import 'package:movie_rating_application/helper/helper_methods.dart';
+import 'package:movie_rating_application/helper/logger_util.dart';
+import 'package:movie_rating_application/helper/post_login.dart';
+import 'package:movie_rating_application/networks/network_caller.dart';
+import 'package:movie_rating_application/utils/navigation_screen.dart';
 
 import 'helper/di.dart';
 

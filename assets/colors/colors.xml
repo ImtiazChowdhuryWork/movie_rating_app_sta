@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
 
-<color name="scaffoldBackgroundColor">#FF111111</color>
+<color name="scaffoldBackgroundColor">#FF1a3248</color>
 <color name="cFFFFFF">#FFFFFFFF</color>
 <color name="c000000">#FF000000</color>
 <color name="cfefefe">#FFfefefe</color>
@@ -10,6 +10,11 @@
 <color name="c3c3c3c">#FF3c3c3c</color>
 <color name="cc6c6c6">#FFc6c6c6</color>
 <color name="c727272">#FF727272</color>
+<color name="c1a3248">#FF1a3248</color>
+<color name="c999999">#FF999999</color>
+<color name="cc53412">#FFc53412</color>
+<color name="cFDFDFD">#FFFDFDFD</color>
+
 
 
 </colors>

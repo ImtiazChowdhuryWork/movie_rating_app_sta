@@ -301,17 +301,13 @@
 //   }
 // }
 
-import 'package:bloodfit/features/home/presentation/home_screen.dart';
-import 'package:bloodfit/features/meal_plan_feature_options/presentation/meal_plan_feature_options.dart';
-import 'package:bloodfit/features/meal_scanner/presentation/meal_scanner_screen.dart';
-import 'package:bloodfit/features/weight_history/presentation/weight_history_screen.dart';
-import 'package:bloodfit/features/work_out/presentation/work_out_screen.dart';
-import 'package:bloodfit/gen/assets.gen.dart';
-import 'package:bloodfit/helper/ui_helpers.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../gen/colors.gen.dart';
+import '../gen/assets.gen.dart';
+import '../helper/ui_helpers.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
@@ -326,11 +322,11 @@ class _NavigationScreenState extends State<NavigationScreen> {
 
   // Remove MealScannerScreen from pages - it will be a separate screen
   final List<Widget> _pages = [
-    HomeScreen(),
-    MealPlanFeatureOptions(),
+    // HomeScreen(),
+    // MealPlanFeatureOptions(),
     Container(), // Placeholder for scanner index
-    WorkOutScreen(),
-    WeightHistoryScreen(), // Replace with your Progress screen
+    // WorkOutScreen(),
+    // WeightHistoryScreen(), // Replace with your Progress screen
   ];
 
   @override
@@ -348,10 +344,10 @@ class _NavigationScreenState extends State<NavigationScreen> {
   void _onItemTapped(int index) {
     if (index == 2) {
       // Scanner button tapped - navigate to MealScannerScreen
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => MealScannerScreen()),
-      );
+      // Navigator.push(
+      //   context,
+      //   MaterialPageRoute(builder: (context) => MealScannerScreen()),
+      // );
     } else {
       setState(() {
         _selectedIndex = index;
@@ -426,10 +422,10 @@ class AnimatedNavigationBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         _buildNavItem(0, Assets.icons.homeIcon, "Home"),
-        _buildNavItem(1, Assets.icons.mealIcon, "Meal"),
-        _buildMiddleNavItem(2, Assets.icons.scanIcon, "Scanner"),
-        _buildNavItem(3, Assets.icons.workoutIcon, "Workout"),
-        _buildNavItem(4, Assets.icons.progressIcon, "Progress"),
+        _buildNavItem(1, Assets.icons.homeIcon, "Meal"),
+        _buildMiddleNavItem(2, Assets.icons.homeIcon, "Scanner"),
+        _buildNavItem(3, Assets.icons.homeIcon, "Workout"),
+        _buildNavItem(4, Assets.icons.homeIcon, "Progress"),
       ],
     );
   }

@@ -3,6 +3,6 @@ import 'package:get/get.dart';
 class ControllerBindings extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => ReadMoreController());
+    // Get.lazyPut(() => ReadMoreController());
   }
 }
