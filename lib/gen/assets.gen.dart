@@ -45,6 +45,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/home_icon.svg
   String get homeIcon => 'assets/icons/home_icon.svg';
 
+  /// File path: assets/icons/notification_icon.svg
+  String get notificationIcon => 'assets/icons/notification_icon.svg';
+
   /// List of all assets
   List<String> get values => [
     checkBoxSelectedIcon,
@@ -52,6 +55,7 @@ class $AssetsIconsGen {
     faceBookIcon,
     googleIcon,
     homeIcon,
+    notificationIcon,
   ];
 }
 
