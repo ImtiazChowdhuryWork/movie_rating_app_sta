@@ -111,7 +111,13 @@ class SignInScreen extends StatelessWidget {
               UIHelper.verticalSpace(32.h),
 
               ///----------->>> Section : Login Button
-              CustomElevatedButton(onTap: () {}, buttonTitle: 'Login'),
+              CustomElevatedButton(
+                onTap: () {
+                  LoggerUtils.debug("Sign In Button taped!");
+                  Get.offAllNamed(Routes.homeScreen);
+                },
+                buttonTitle: 'Login',
+              ),
               UIHelper.verticalSpace(56.h),
 
               ///----------->>> Section : Social Media Button

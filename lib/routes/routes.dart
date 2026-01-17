@@ -8,6 +8,7 @@ import 'package:movie_rating_application/features/auth/sign_up_screen/presentati
 
 import '../features/auth/forgot_password/presentation/forgot_password_screen.dart';
 import '../features/auth/otp_validation/presentation/otp_validation_screen.dart';
+import '../features/home/presentation/home_screen.dart';
 import '../features/welcome/presentation/welcome_screen.dart';
 
 class Routes {
@@ -17,6 +18,7 @@ class Routes {
   static const String forgotPasswordScreen = '/forgot_password_screen';
   static const String otpValidationScreen = '/otp_validation_screen';
   static const String resetPasswordScreen = '/reset_password_screen';
+  static const String homeScreen = '/home_screen';
 
   static final appRoutes = [
     ///Splash Screen
@@ -68,6 +70,15 @@ class Routes {
     GetPage(
       name: resetPasswordScreen,
       page: () => ResetPasswordScreen(),
+      transition: _transition(),
+      customTransition: _customTransition(),
+      transitionDuration: _duration(),
+    ),
+
+    ///Home Screen
+    GetPage(
+      name: homeScreen,
+      page: () => HomeScreen(),
       transition: _transition(),
       customTransition: _customTransition(),
       transitionDuration: _duration(),
