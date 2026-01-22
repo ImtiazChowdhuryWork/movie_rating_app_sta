@@ -66,9 +66,17 @@ class $AssetsImagesGen {
   AssetGenImage get appMiniIcon =>
       const AssetGenImage('assets/images/app_mini_icon.png');
 
+  /// File path: assets/images/onboarding_body_image_four.png
+  AssetGenImage get onboardingBodyImageFour =>
+      const AssetGenImage('assets/images/onboarding_body_image_four.png');
+
   /// File path: assets/images/onboarding_body_image_one.png
   AssetGenImage get onboardingBodyImageOne =>
       const AssetGenImage('assets/images/onboarding_body_image_one.png');
+
+  /// File path: assets/images/onboarding_body_image_three.png
+  AssetGenImage get onboardingBodyImageThree =>
+      const AssetGenImage('assets/images/onboarding_body_image_three.png');
 
   /// File path: assets/images/onboarding_body_image_two.png
   AssetGenImage get onboardingBodyImageTwo =>
@@ -77,7 +85,9 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     appMiniIcon,
+    onboardingBodyImageFour,
     onboardingBodyImageOne,
+    onboardingBodyImageThree,
     onboardingBodyImageTwo,
   ];
 }

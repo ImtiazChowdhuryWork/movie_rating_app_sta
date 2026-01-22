@@ -4,8 +4,7 @@ import 'package:get/get.dart';
 import 'package:movie_rating_application/constants/app_list.dart';
 import 'package:movie_rating_application/custom_widgets/custom_elevated_button.dart';
 import 'package:movie_rating_application/features/onboarding/data/controller/onboarding_screen_controller.dart';
-import 'package:movie_rating_application/features/onboarding/presentation/widgets/onboarding_widget.dart';
-import 'package:movie_rating_application/gen/assets.gen.dart';
+import 'package:movie_rating_application/features/onboarding/presentation/widgets/onboarding_wdiget_screen_one.dart';
 import 'package:movie_rating_application/helper/ui_helpers.dart';
 
 import '../../../custom_widgets/app_logo_widget.dart';
@@ -43,7 +42,17 @@ class OnboardingScreen extends StatelessWidget {
                   AppLogoWidget(),
                 ],
               ),
-              UIHelper.verticalSpace(40.h),
+
+              Obx(() {
+                return UIHelper.verticalSpace(
+                  controller.index.value == 0 || controller.index.value == 1
+                      ? 96.h
+                      : controller.index.value == 2 ||
+                            controller.index.value == 3
+                      ? 33.h
+                      : 0,
+                );
+              }),
 
               ///---------------->>> Onboarding Widget
               Expanded(
@@ -54,17 +63,21 @@ class OnboardingScreen extends StatelessWidget {
                     controller.updateIndex(value: index);
                   },
                   itemBuilder: (context, index) {
-                    var data = AppList.onboardingList[index];
-                    return OnboardingWidget(
-                      titleMiniText: data.titleMiniText,
-                      titleBoldText: data.titleBoldText,
-                      bodyImage: data.bodyImage,
-                      subTitle: data.subTitle,
-                    );
+                    return AppList.onboardingList[index];
                   },
                 ),
               ),
-              UIHelper.verticalSpace(158.h),
+
+              Obx(() {
+                return UIHelper.verticalSpace(
+                  controller.index.value == 0 || controller.index.value == 1
+                      ? 50.h
+                      : controller.index.value == 2 ||
+                            controller.index.value == 3
+                      ? 30.h
+                      : 0,
+                );
+              }),
 
               ///----------------->>> Page Index Indicator
               Obx(() {
