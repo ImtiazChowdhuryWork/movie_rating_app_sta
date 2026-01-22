@@ -28,7 +28,7 @@ class OnboardingScreenController extends GetxController {
   }
 
   void goToPreviousPage() {
-    if (index.value == 1) {
+    if (index.value <= AppList.onboardingList.length) {
       pageViewController.previousPage(
         duration: Duration(milliseconds: 300),
         curve: Curves.easeIn,
