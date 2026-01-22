@@ -86,8 +86,8 @@ class OnboardingScreen extends StatelessWidget {
                   children: List.generate(
                     AppList.onboardingList.length,
                     (dotIndex) => Container(
-                      width: controller.index.value == dotIndex ? 20.w : 10.w,
-                      height: 10.h,
+                      width: controller.index.value == dotIndex ? 20.w : 8.w,
+                      height: 8.h,
                       margin: EdgeInsets.symmetric(horizontal: 4.w),
                       decoration: BoxDecoration(
                         color: controller.index.value == dotIndex

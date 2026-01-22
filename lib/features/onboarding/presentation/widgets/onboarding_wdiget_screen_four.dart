@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:movie_rating_application/features/onboarding/presentation/widgets/onboarding_four_trailing_widget.dart';
 
 import '../../../../constants/text_font_style.dart';
 import '../../../../gen/assets.gen.dart';
@@ -24,17 +25,38 @@ class OnboardingWdigetScreenFour extends StatelessWidget {
 
           ///------------>>> Section : Body Image
           Image.asset(
-            Assets.images.onboardingBodyImageOne.path,
+            Assets.images.onboardingBodyImageFour.path,
             height: 254.h,
             width: 254.w,
             fit: BoxFit.contain,
           ),
           UIHelper.verticalSpace(56.h),
+          UIHelper.horizontalSpace(1.sw),
 
-          Text(
-            'See how much messaging is in a movie or TV show before you press play.',
-            textAlign: TextAlign.center,
-            style: TextFontStyle.headline16w400cFDFDFDStyleLora,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox.shrink(),
+              OnboardingFourTrailingWidget(
+                title: 'Community + AI-assisted ratings',
+              ),
+              SizedBox.shrink(),
+            ],
+          ),
+          Row(
+            children: [
+              UIHelper.horizontalSpace(0.14.sw),
+              OnboardingFourTrailingWidget(title: 'No censorship, no bans'),
+            ],
+          ),
+          Row(
+            children: [
+              UIHelper.horizontalSpace(0.14.sw),
+              OnboardingFourTrailingWidget(
+                title: 'Decide what you watch',
+                isSizedBoxUsed: false,
+              ),
+            ],
           ),
         ],
       ),
