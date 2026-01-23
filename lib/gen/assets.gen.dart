@@ -118,6 +118,10 @@ class $AssetsImagesGen {
   AssetGenImage get onboardingBodyImageTwo =>
       const AssetGenImage('assets/images/onboarding_body_image_two.png');
 
+  /// File path: assets/images/start_icon_with_white_bg.png
+  AssetGenImage get startIconWithWhiteBg =>
+      const AssetGenImage('assets/images/start_icon_with_white_bg.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
     addImageOne,
@@ -127,6 +131,7 @@ class $AssetsImagesGen {
     onboardingBodyImageOne,
     onboardingBodyImageThree,
     onboardingBodyImageTwo,
+    startIconWithWhiteBg,
   ];
 }
 
