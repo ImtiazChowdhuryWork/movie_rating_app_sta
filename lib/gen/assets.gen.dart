@@ -30,6 +30,9 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/bookmarks_icon.svg
+  String get bookmarksIcon => 'assets/icons/bookmarks_icon.svg';
+
   /// File path: assets/icons/check_box_selected_icon.svg
   String get checkBoxSelectedIcon => 'assets/icons/check_box_selected_icon.svg';
 
@@ -38,6 +41,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/face_book_icon.svg
   String get faceBookIcon => 'assets/icons/face_book_icon.svg';
+
+  /// File path: assets/icons/favourite_icon.svg
+  String get favouriteIcon => 'assets/icons/favourite_icon.svg';
 
   /// File path: assets/icons/google_icon.svg
   String get googleIcon => 'assets/icons/google_icon.svg';
@@ -48,27 +54,53 @@ class $AssetsIconsGen {
   /// File path: assets/icons/notification_icon.svg
   String get notificationIcon => 'assets/icons/notification_icon.svg';
 
+  /// File path: assets/icons/ratings_icon.svg
+  String get ratingsIcon => 'assets/icons/ratings_icon.svg';
+
+  /// File path: assets/icons/repost_icon.svg
+  String get repostIcon => 'assets/icons/repost_icon.svg';
+
+  /// File path: assets/icons/search_icon.svg
+  String get searchIcon => 'assets/icons/search_icon.svg';
+
   /// File path: assets/icons/star_icon.svg
   String get starIcon => 'assets/icons/star_icon.svg';
 
+  /// File path: assets/icons/watchlist_icon.svg
+  String get watchlistIcon => 'assets/icons/watchlist_icon.svg';
+
   /// List of all assets
   List<String> get values => [
+    bookmarksIcon,
     checkBoxSelectedIcon,
     eyeOpen,
     faceBookIcon,
+    favouriteIcon,
     googleIcon,
     homeIcon,
     notificationIcon,
+    ratingsIcon,
+    repostIcon,
+    searchIcon,
     starIcon,
+    watchlistIcon,
   ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/add_image_one.png
+  AssetGenImage get addImageOne =>
+      const AssetGenImage('assets/images/add_image_one.png');
+
   /// File path: assets/images/app_mini_icon.png
   AssetGenImage get appMiniIcon =>
       const AssetGenImage('assets/images/app_mini_icon.png');
+
+  /// File path: assets/images/background_image.png
+  AssetGenImage get backgroundImage =>
+      const AssetGenImage('assets/images/background_image.png');
 
   /// File path: assets/images/onboarding_body_image_four.png
   AssetGenImage get onboardingBodyImageFour =>
@@ -88,7 +120,9 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+    addImageOne,
     appMiniIcon,
+    backgroundImage,
     onboardingBodyImageFour,
     onboardingBodyImageOne,
     onboardingBodyImageThree,
