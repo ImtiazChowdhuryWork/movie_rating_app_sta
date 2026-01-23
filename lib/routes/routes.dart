@@ -8,6 +8,7 @@ import 'package:movie_rating_application/features/auth/sign_up_screen/presentati
 
 import '../features/auth/forgot_password/presentation/forgot_password_screen.dart';
 import '../features/auth/otp_validation/presentation/otp_validation_screen.dart';
+import '../features/home/binding/home_screen_binding.dart';
 import '../features/home/presentation/home_screen.dart';
 import '../features/welcome/presentation/welcome_screen.dart';
 
@@ -79,6 +80,7 @@ class Routes {
     GetPage(
       name: homeScreen,
       page: () => HomeScreen(),
+      binding: HomeScreenBinding(),
       transition: _transition(),
       customTransition: _customTransition(),
       transitionDuration: _duration(),

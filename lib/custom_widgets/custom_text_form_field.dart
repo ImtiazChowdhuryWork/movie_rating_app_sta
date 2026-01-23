@@ -36,6 +36,7 @@ final class CustomFormField extends StatelessWidget {
   final bool? isEnabled;
   final double? cursorHeight;
   final Color? disableColor;
+  final Color? fillColor;
   final bool isRead;
   final double? borderRadius;
   final EdgeInsetsGeometry? padding;
@@ -85,6 +86,7 @@ final class CustomFormField extends StatelessWidget {
     this.showVerticalDivider = true,
     this.child,
     this.errorText,
+    this.fillColor,
   });
 
   @override
@@ -113,7 +115,7 @@ final class CustomFormField extends StatelessWidget {
         decoration: InputDecoration(
           filled: true,
           // fillColor: AppColors.cFFFFFF,
-          fillColor: Colors.transparent,
+          fillColor: fillColor ?? Colors.transparent,
           suffixIcon: suffixIcon != null
               ? Padding(padding: EdgeInsets.all(12.sp), child: suffixIcon)
               : null,
