@@ -20,10 +20,24 @@ class TextFontStyle {
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
   );
+  static final headline12w400cFDFDFDStyleLora = TextStyle(
+    fontFamily: 'Lora',
+    fontFamilyFallback: const ['Quicksand', 'Franchise'],
+    color: AppColors.cFDFDFD,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+  );
   static final headline12w400cC4C4C4StyleQuicksand = TextStyle(
     fontFamily: 'Quicksand',
     fontFamilyFallback: const ['Quicksand', 'Lora'],
     color: AppColors.cC4C4C4,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+  );
+  static final headline12w400f8f8f8StyleLora = TextStyle(
+    fontFamily: 'Lora',
+    fontFamilyFallback: const ['Quicksand', 'Franchise'],
+    color: AppColors.cf8f8f8,
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
   );
