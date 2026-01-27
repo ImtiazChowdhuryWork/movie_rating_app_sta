@@ -30,6 +30,9 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/add_icon.svg
+  String get addIcon => 'assets/icons/add_icon.svg';
+
   /// File path: assets/icons/bookmarks_icon.svg
   String get bookmarksIcon => 'assets/icons/bookmarks_icon.svg';
 
@@ -44,6 +47,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/favourite_icon.svg
   String get favouriteIcon => 'assets/icons/favourite_icon.svg';
+
+  /// File path: assets/icons/filled_rating_icon.svg
+  String get filledRatingIcon => 'assets/icons/filled_rating_icon.svg';
 
   /// File path: assets/icons/google_icon.svg
   String get googleIcon => 'assets/icons/google_icon.svg';
@@ -66,16 +72,24 @@ class $AssetsIconsGen {
   /// File path: assets/icons/star_icon.svg
   String get starIcon => 'assets/icons/star_icon.svg';
 
+  /// File path: assets/icons/trending_icon.svg
+  String get trendingIcon => 'assets/icons/trending_icon.svg';
+
   /// File path: assets/icons/watchlist_icon.svg
   String get watchlistIcon => 'assets/icons/watchlist_icon.svg';
 
+  /// File path: assets/icons/white_fire_icon.svg
+  String get whiteFireIcon => 'assets/icons/white_fire_icon.svg';
+
   /// List of all assets
   List<String> get values => [
+    addIcon,
     bookmarksIcon,
     checkBoxSelectedIcon,
     eyeOpen,
     faceBookIcon,
     favouriteIcon,
+    filledRatingIcon,
     googleIcon,
     homeIcon,
     notificationIcon,
@@ -83,7 +97,9 @@ class $AssetsIconsGen {
     repostIcon,
     searchIcon,
     starIcon,
+    trendingIcon,
     watchlistIcon,
+    whiteFireIcon,
   ];
 }
 
