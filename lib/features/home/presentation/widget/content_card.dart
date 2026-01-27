@@ -8,6 +8,8 @@ import '../../../../helper/ui_helpers.dart';
 
 class ContentCard extends StatelessWidget {
   final String imageUrl;
+  final double imageHeight;
+  final double imageWidth;
   final String contentName;
   final String contentType;
   final String contentStarted;
@@ -26,6 +28,8 @@ class ContentCard extends StatelessWidget {
     required this.contentDuration,
     required this.contentTagsListLength,
     required this.contentTagList,
+    this.imageHeight = 167,
+    this.imageWidth = 167,
   });
 
   @override
@@ -43,8 +47,8 @@ class ContentCard extends StatelessWidget {
           children: [
             ///------------>>> Section : Image & Ratings progress
             Container(
-              width: 167.w,
-              height: 167.h,
+              width: imageWidth.w,
+              height: imageHeight.h,
               margin: EdgeInsets.all(10.sp),
               decoration: BoxDecoration(
                 border: Border.all(color: AppColors.c516374),

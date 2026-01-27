@@ -18,7 +18,7 @@ class AppList {
   static final List<ContentCardModel> contentList = [
     ContentCardModel(
       imageUrl: Assets.images.onboardingBodyImageOne.path,
-      contentName: 'The Last Kingdom',
+      contentName: 'The Last Kingdomgdfgdfgdfgfdgf',
       contentType: 'TV Series',
       contentLifeCycleStarted: '2015',
       contentLifeCycleEnded: '2022',

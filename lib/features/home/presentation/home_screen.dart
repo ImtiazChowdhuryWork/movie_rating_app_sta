@@ -8,6 +8,8 @@ import 'package:movie_rating_application/custom_widgets/custom_text_form_field.d
 import 'package:movie_rating_application/features/home/presentation/widget/appbar_section_widget.dart';
 import 'package:movie_rating_application/features/home/presentation/widget/content_card.dart';
 import 'package:movie_rating_application/features/home/presentation/widget/overview_text_widget.dart';
+import 'package:movie_rating_application/features/home/presentation/widget/spotlight_tab_content.dart';
+import 'package:movie_rating_application/features/home/presentation/widget/wmr_tabs_widget.dart';
 import 'package:movie_rating_application/gen/assets.gen.dart';
 import 'package:movie_rating_application/gen/colors.gen.dart';
 import 'package:movie_rating_application/helper/ui_helpers.dart';
@@ -30,39 +32,53 @@ class HomeScreen extends StatelessWidget {
         ),
         child: SafeArea(
           child: SingleChildScrollView(
-            padding: EdgeInsets.all(UIHelper.kDefaulutPadding()),
             child: Column(
               children: [
                 ///------------>>> Section : Appbar
-                AppbarSectionWidget(),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: UIHelper.kDefaulutPadding(),
+                  ),
+                  child: AppbarSectionWidget(),
+                ),
                 UIHelper.verticalSpace(20.h),
 
                 ///--------->>> Section : Horizontal Add
-                ClipRRect(
-                  borderRadius: BorderRadiusGeometry.circular(8.r),
-                  child: Image.asset(
-                    Assets.images.addImageOne.path,
-                    width: 1.sw,
-                    height: 0.060.sh,
-                    fit: BoxFit.contain,
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: UIHelper.kDefaulutPadding(),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadiusGeometry.circular(8.r),
+                    child: Image.asset(
+                      Assets.images.addImageOne.path,
+                      width: 1.sw,
+                      height: 0.060.sh,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
                 UIHelper.verticalSpace(16.h),
 
                 ///-------------->>> Section : Searchbar
-                CustomFormField(
-                  fillColor: AppColors.c0e1c28,
-                  prefixIcon: SvgPicture.asset(Assets.icons.searchIcon),
-                  hintText: 'Search',
-                  hintTextStyle: TextFontStyle.headline16w400cC4C4C4StyleLora,
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: UIHelper.kDefaulutPadding(),
+                  ),
+                  child: CustomFormField(
+                    fillColor: AppColors.c0e1c28,
+                    prefixIcon: SvgPicture.asset(Assets.icons.searchIcon),
+                    hintText: 'Search',
+                    hintTextStyle: TextFontStyle.headline16w400cC4C4C4StyleLora,
+                  ),
                 ),
                 UIHelper.verticalSpace(16.h),
 
-                ///-------------->>> Section : Overview
-                OverviewTextWidget(),
+                ///-------------->>> Section : POPULAR MOVIES
+                SectionTypeWidget(title: 'POPULAR MOVIES'),
                 UIHelper.verticalSpace(16.h),
 
-                ///------------>>> Section : OverView Contents Card
+                ///------------>>> Section : POPULAR MOVIES Card
                 SizedBox(
                   height: 318.h,
                   child: ListView.separated(
@@ -87,6 +103,21 @@ class HomeScreen extends StatelessWidget {
                     },
                   ),
                 ),
+                UIHelper.verticalSpace(42.h),
+
+                ///-------------->>> Section : TOp 10 WMR List
+                SectionTypeWidget(title: 'TOP 10 WMR List'),
+                UIHelper.verticalSpace(16.h),
+
+                ///------------>>> Section : Tabs Type : Today, Week, Month
+                WmrTabsWidget(),
+                UIHelper.verticalSpace(42.h),
+
+                ///---------->>> Section : In the spotlight
+                SectionTypeWidget(title: 'IN THE SPOTLIGHT'),
+                UIHelper.verticalSpace(16.h),
+
+                SpotlightTabContent(),
               ],
             ),
           ),

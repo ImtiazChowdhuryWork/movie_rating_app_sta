@@ -6,8 +6,9 @@ import '../../../../gen/assets.gen.dart';
 import '../../../../gen/colors.gen.dart';
 import '../../../../helper/ui_helpers.dart';
 
-class OverviewTextWidget extends StatelessWidget {
-  const OverviewTextWidget({super.key});
+class SectionTypeWidget extends StatelessWidget {
+  final String title;
+  const SectionTypeWidget({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class OverviewTextWidget extends StatelessWidget {
         ),
         UIHelper.horizontalSpace(8.w),
         Text(
-          'OVERVIEW',
+          title,
           style: TextFontStyle.headline24w400c1a3248StyleFranchise.copyWith(
             color: AppColors.cFDFDFD,
           ),
