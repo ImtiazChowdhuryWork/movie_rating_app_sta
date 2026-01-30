@@ -77,7 +77,7 @@ class _SpotlightTabContentState extends State<SpotlightTabContent>
         ),
 
         SizedBox(
-          height: 0.8.sh,
+          height: 0.7.sh,
           child: TabBarView(
             controller: spotLightMoviesTabController,
             children: [
