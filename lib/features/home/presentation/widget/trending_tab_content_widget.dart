@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:movie_rating_application/constants/app_list.dart';
 import 'package:movie_rating_application/constants/text_font_style.dart';
+import 'package:movie_rating_application/features/home/data/controller/home_screen_controller.dart';
 import 'package:movie_rating_application/features/home/presentation/widget/content_card.dart';
 import 'package:movie_rating_application/gen/colors.gen.dart';
 import 'package:movie_rating_application/helper/ui_helpers.dart';
@@ -11,63 +13,109 @@ class TrendingTabContentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ///------------>>>> Section : Categories
-        SizedBox(
-          height: 35.h,
-          child: ListView.separated(
-            itemCount: AppList.contentList.length,
-            separatorBuilder: (context, index) =>
-                UIHelper.horizontalSpace(10.w),
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              var data = AppList.contentList[index];
-              return Container(
-                alignment: Alignment.center,
-                padding: EdgeInsets.symmetric(horizontal: 10.w),
-                decoration: BoxDecoration(
-                  color: AppColors.cFDFDFD.withAlpha(50),
-                  border: Border.all(color: AppColors.cFDFDFD),
-                  borderRadius: BorderRadius.circular(12.r),
-                ),
-                child: Text(
-                  data.contentType,
-                  style: TextFontStyle.headline12w600cFDFDFDStyleLora,
-                ),
-              );
-            },
-          ),
-        ),
-        UIHelper.verticalSpace(10.h),
-
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 0.65,
-              ),
+    HomeScreenController homeController = Get.find<HomeScreenController>();
+    
+    return Obx(() {
+      // Filter content based on selected category
+      final filteredContent = homeController.selectedCategoryType.value.isEmpty || homeController.selectedCategoryType.value == 'all'
+          ? AppList.contentList
+          : AppList.contentList.where((content) => 
+              content.contentType == homeController.selectedCategoryType.value)
+            .toList();
+      
+      return Column(
+        children: [
+          ///------------>>>> Section : Categories
+          SizedBox(
+            height: 35.h,
+            child: ListView.separated(
               itemCount: AppList.contentList.length,
+              separatorBuilder: (context, index) =>
+                  UIHelper.horizontalSpace(10.w),
+              scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 var data = AppList.contentList[index];
-                return ContentCard(
-                  imageUrl: data.imageUrl,
-                  imageWidth: 1.sw,
-                  contentName: data.contentName,
-                  contentType: data.contentType,
-                  contentStarted: data.contentLifeCycleStarted,
-                  contentEnded: data.contentLifeCycleEnded,
-                  contentDuration: data.contentDuration,
-                  contentTagsListLength: data.contentTagsList.length,
-                  contentTagList: data.contentTagsList,
-                );
+                return Obx(() {
+                  final isSelected = data.contentType == 
+                      homeController.selectedCategoryType.value;
+                  return InkWell(
+                    onTap: () {
+                      homeController.setSelectedCategoryType(
+                        categoryName: data.contentType,
+                      );
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      padding: EdgeInsets.symmetric(horizontal: 10.w),
+                      decoration: BoxDecoration(
+                        color: isSelected ? AppColors.cc53412 :
+                             AppColors.cFDFDFD.withAlpha(50),
+                        border: 
+                        
+                        isSelected ? Border(
+                          bottom: BorderSide(color: AppColors.cb20000)
+                        ) : 
+                        Border.all(
+                          color: AppColors.cFDFDFD,
+                        ),
+                        borderRadius: BorderRadius.circular(12.r),
+                      ),
+                      child: Text(
+                        data.contentType,
+                        style: isSelected
+                            ? TextFontStyle.headline12w500cfefefeStyleQuicksand.copyWith(
+                                color: Colors.white,
+                              )
+                            : TextFontStyle.headline12w600cFDFDFDStyleLora,
+                      ),
+                    ),
+                  );
+                });
               },
             ),
           ),
-        ),
-      ],
-    );
+          UIHelper.verticalSpace(10.h),
+
+          if (filteredContent.isEmpty)
+            Expanded(
+              child: Center(
+                child: Text(
+                  'No content available for this category',
+                  style: TextFontStyle.headline12w600cFDFDFDStyleLora,
+                ),
+              ),
+            )
+          else
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.all(8.w),
+                child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 10.w,
+                    mainAxisSpacing: 10.h,
+                    childAspectRatio: 0.62,
+                  ),
+                  itemCount: filteredContent.length,
+                  itemBuilder: (context, index) {
+                    final content = filteredContent[index];
+                    return ContentCard(
+                      imageUrl: content.imageUrl,
+                      imageWidth: 1.sw,
+                      contentName: content.contentName,
+                      contentType: content.contentType,
+                      contentStarted: content.contentLifeCycleStarted,
+                      contentEnded: content.contentLifeCycleEnded,
+                      contentDuration: content.contentDuration,
+                      contentTagsListLength: content.contentTagsList.length,
+                      contentTagList: content.contentTagsList,
+                    );
+                  },
+                ),
+              ),
+            ),
+        ],
+      );
+    });
   }
 }
