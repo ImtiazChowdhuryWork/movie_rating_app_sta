@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                   child: AppbarSectionWidget(),
                 ),
                 UIHelper.verticalSpace(20.h),
-
+            
                 ///--------->>> Section : Horizontal Add
                 Padding(
                   padding: EdgeInsets.symmetric(
@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 UIHelper.verticalSpace(16.h),
-
+            
                 ///-------------->>> Section : Searchbar
                 Padding(
                   padding: EdgeInsets.symmetric(
@@ -70,14 +70,15 @@ class HomeScreen extends StatelessWidget {
                     prefixIcon: SvgPicture.asset(Assets.icons.searchIcon),
                     hintText: 'Search',
                     hintTextStyle: TextFontStyle.headline16w400cC4C4C4StyleLora,
+                    borderColor: Colors.transparent,
                   ),
                 ),
                 UIHelper.verticalSpace(16.h),
-
+            
                 ///-------------->>> Section : POPULAR MOVIES
                 SectionTypeWidget(title: 'POPULAR MOVIES'),
                 UIHelper.verticalSpace(16.h),
-
+            
                 ///------------>>> Section : POPULAR MOVIES Card
                 SizedBox(
                   height: 318.h,
@@ -86,10 +87,10 @@ class HomeScreen extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     separatorBuilder: (context, index) =>
                         UIHelper.horizontalSpace(10.w),
-
+            
                     itemBuilder: (context, index) {
                       var data = AppList.contentList[index];
-
+            
                       return ContentCard(
                         imageUrl: data.imageUrl,
                         contentName: data.contentName,
@@ -104,19 +105,19 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 UIHelper.verticalSpace(42.h),
-
+            
                 ///-------------->>> Section : TOp 10 WMR List
                 SectionTypeWidget(title: 'TOP 10 WMR List'),
                 UIHelper.verticalSpace(16.h),
-
+            
                 ///------------>>> Section : Tabs Type : Today, Week, Month
                 WmrTabsWidget(),
                 UIHelper.verticalSpace(42.h),
-
+            
                 ///---------->>> Section : In the spotlight
                 SectionTypeWidget(title: 'IN THE SPOTLIGHT'),
                 UIHelper.verticalSpace(16.h),
-
+            
                 SpotlightTabContent(),
               ],
             ),
