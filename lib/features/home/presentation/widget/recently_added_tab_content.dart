@@ -1,26 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:movie_rating_application/constants/app_list.dart';
-import 'package:movie_rating_application/constants/text_font_style.dart';
-import 'package:movie_rating_application/features/home/data/controller/home_screen_controller.dart';
 import 'package:movie_rating_application/features/home/presentation/widget/content_card.dart';
-import 'package:movie_rating_application/gen/colors.gen.dart';
-import 'package:movie_rating_application/helper/ui_helpers.dart';
 
-class TrendingTabContentWidget extends StatelessWidget {
-  const TrendingTabContentWidget({super.key});
+import '../../../../constants/app_list.dart';
+import '../../../../constants/text_font_style.dart';
+import '../../../../gen/colors.gen.dart';
+import '../../../../helper/ui_helpers.dart';
+import '../../data/controller/home_screen_controller.dart';
+
+
+
+class RecentlyAddedTabContent extends StatelessWidget {
+  const RecentlyAddedTabContent({super.key});
 
   @override
   Widget build(BuildContext context) {
     HomeScreenController homeController = Get.find<HomeScreenController>();
-    
     return Obx(() {
       // Filter content based on selected category
-      final filteredContent = homeController.trendingTabSelectedCategoryType.value.isEmpty || homeController.trendingTabSelectedCategoryType.value == 'all'
+      final filteredContent = homeController.recentlyAddedTabSelectedCategoryType.value.isEmpty || homeController.recentlyAddedTabSelectedCategoryType.value == 'all'
           ? AppList.contentList
           : AppList.contentList.where((content) => 
-              content.contentType == homeController.trendingTabSelectedCategoryType.value)
+              content.contentType == homeController.recentlyAddedTabSelectedCategoryType.value)
             .toList();
       
       return Column(
@@ -37,10 +39,10 @@ class TrendingTabContentWidget extends StatelessWidget {
                 var data = AppList.contentList[index];
                 return Obx(() {
                   final isSelected = data.contentType == 
-                      homeController.trendingTabSelectedCategoryType.value;
+                      homeController.recentlyAddedTabSelectedCategoryType.value;
                   return InkWell(
                     onTap: () {
-                      homeController.setTendingTabSelectedCategoryType(
+                      homeController.setRecentlyAddedTabSelectedCategoryType(
                         categoryName: data.contentType,
                       );
                     },
