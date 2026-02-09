@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:movie_rating_application/features/auth/reset_password/presentation/reset_password_screen.dart';
 import 'package:movie_rating_application/features/auth/sign_in/presentation/sign_in_screen.dart';
 import 'package:movie_rating_application/features/auth/sign_up_screen/presentation/sign_up_screen.dart';
+import 'package:movie_rating_application/features/search/presentation/search_screen.dart';
 
 import '../features/auth/forgot_password/presentation/forgot_password_screen.dart';
 import '../features/auth/otp_validation/presentation/otp_validation_screen.dart';
@@ -20,6 +21,7 @@ class Routes {
   static const String otpValidationScreen = '/otp_validation_screen';
   static const String resetPasswordScreen = '/reset_password_screen';
   static const String homeScreen = '/home_screen';
+  static const String searchScreen = '/search_screen';
 
   static final appRoutes = [
     ///Splash Screen
@@ -81,6 +83,16 @@ class Routes {
       name: homeScreen,
       page: () => HomeScreen(),
       binding: HomeScreenBinding(),
+      transition: _transition(),
+      customTransition: _customTransition(),
+      transitionDuration: _duration(),
+    ),
+
+    ///Home Screen
+    GetPage(
+      name: searchScreen,
+      page: () => SearchScreen(),
+      // binding: HomeScreenBinding(),
       transition: _transition(),
       customTransition: _customTransition(),
       transitionDuration: _duration(),

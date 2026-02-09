@@ -7,12 +7,13 @@ import 'package:movie_rating_application/constants/text_font_style.dart';
 import 'package:movie_rating_application/custom_widgets/custom_text_form_field.dart';
 import 'package:movie_rating_application/features/home/presentation/widget/appbar_section_widget.dart';
 import 'package:movie_rating_application/features/home/presentation/widget/content_card.dart';
-import 'package:movie_rating_application/features/home/presentation/widget/overview_text_widget.dart';
+import 'package:movie_rating_application/custom_widgets/section_type_widget.dart';
 import 'package:movie_rating_application/features/home/presentation/widget/spotlight_tab_content.dart';
 import 'package:movie_rating_application/features/home/presentation/widget/wmr_tabs_widget.dart';
 import 'package:movie_rating_application/gen/assets.gen.dart';
 import 'package:movie_rating_application/gen/colors.gen.dart';
 import 'package:movie_rating_application/helper/ui_helpers.dart';
+import 'package:movie_rating_application/routes/routes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -61,16 +62,22 @@ class HomeScreen extends StatelessWidget {
                 UIHelper.verticalSpace(16.h),
             
                 ///-------------->>> Section : Searchbar
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: UIHelper.kDefaulutPadding(),
-                  ),
-                  child: CustomFormField(
-                    fillColor: AppColors.c0e1c28,
-                    prefixIcon: SvgPicture.asset(Assets.icons.searchIcon),
-                    hintText: 'Search',
-                    hintTextStyle: TextFontStyle.headline16w400cC4C4C4StyleLora,
-                    borderColor: Colors.transparent,
+                GestureDetector(
+                  onTap: (){
+                    Get.toNamed(Routes.searchScreen);
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: UIHelper.kDefaulutPadding(),
+                    ),
+                    child: CustomFormField(
+                      hintText: 'Search',
+                      isEnabled: false,
+                      fillColor: AppColors.c0e1c28,
+                      borderColor: Colors.transparent,
+                      prefixIcon: SvgPicture.asset(Assets.icons.searchIcon),
+                      hintTextStyle: TextFontStyle.headline16w400cC4C4C4StyleLora,
+                    ),
                   ),
                 ),
                 UIHelper.verticalSpace(16.h),
