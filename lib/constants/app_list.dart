@@ -17,12 +17,14 @@ class AppList {
 
   static final List<ContentCardModel> contentList = [
     ContentCardModel(
-      imageUrl: Assets.images.onboardingBodyImageOne.path,
+      imageUrl: Assets.images.movieImage.path,
       contentName: 'The Last Kingdomgdfgdfgdfgfdgf',
       contentType: 'TV Series',
       contentLifeCycleStarted: '2015',
       contentLifeCycleEnded: '2022',
       contentDuration: '48m',
+      rating: 8.7,
+      circularProgressRating: 0.5,
       contentTagsList: ['Historical', 'Action', 'Drama', 'War', 'Adaptation'],
     ),
     ContentCardModel(
@@ -32,6 +34,8 @@ class AppList {
       contentLifeCycleStarted: '2010',
       contentLifeCycleEnded: '2010',
       contentDuration: '2h 28m',
+      rating: 8.7,
+      circularProgressRating: 0.6,
       contentTagsList: ['Sci-Fi', 'Thriller', 'Action', 'Mind-bending'],
     ),
     ContentCardModel(
@@ -41,6 +45,8 @@ class AppList {
       contentLifeCycleStarted: '2008',
       contentLifeCycleEnded: '2013',
       contentDuration: '47m',
+      rating: 8.7,
+      circularProgressRating: 0.1,
       contentTagsList: ['Crime', 'Drama', 'Thriller', 'Chemistry'],
     ),
     ContentCardModel(
@@ -50,6 +56,8 @@ class AppList {
       contentLifeCycleStarted: '2019',
       contentLifeCycleEnded: '2023',
       contentDuration: '60m',
+      rating: 8.7,
+      circularProgressRating: 0.2,
       contentTagsList: ['Fantasy', 'Action', 'Adventure', 'Monster'],
     ),
     ContentCardModel(
@@ -59,6 +67,8 @@ class AppList {
       contentLifeCycleStarted: '2019',
       contentLifeCycleEnded: '2019',
       contentDuration: '2h 12m',
+      rating: 8.7,
+      circularProgressRating: 0.3,
       contentTagsList: ['Thriller', 'Comedy', 'Drama', 'Social'],
     ),
     ContentCardModel(
@@ -68,6 +78,8 @@ class AppList {
       contentLifeCycleStarted: '2016',
       contentLifeCycleEnded: '2023',
       contentDuration: '58m',
+      rating: 8.7,
+      circularProgressRating: 0.9,
       contentTagsList: ['Historical', 'Drama', 'Biography', 'Royalty'],
     ),
     ContentCardModel(
@@ -77,6 +89,8 @@ class AppList {
       contentLifeCycleStarted: '2021',
       contentLifeCycleEnded: '2021',
       contentDuration: '2h 35m',
+      rating: 8.7,
+      circularProgressRating: 0.6,
       contentTagsList: ['Sci-Fi', 'Adventure', 'Drama', 'Epic'],
     ),
     ContentCardModel(
@@ -86,6 +100,8 @@ class AppList {
       contentLifeCycleStarted: '1994',
       contentLifeCycleEnded: '2004',
       contentDuration: '22m',
+      rating: 8.7,
+      circularProgressRating: 0.7,
       contentTagsList: ['Comedy', 'Romance', 'Sitcom', 'Friendship'],
     ),
     ContentCardModel(
@@ -95,6 +111,8 @@ class AppList {
       contentLifeCycleStarted: '2008',
       contentLifeCycleEnded: '2008',
       contentDuration: '2h 32m',
+      rating: 8.7,
+      circularProgressRating: 0.4,
       contentTagsList: ['Action', 'Crime', 'Drama', 'Superhero'],
     ),
     ContentCardModel(
@@ -104,7 +122,13 @@ class AppList {
       contentLifeCycleStarted: '2016',
       contentLifeCycleEnded: '2025',
       contentDuration: '51m',
+      rating: 8.7,
+      circularProgressRating: 0.5,
       contentTagsList: ['Sci-Fi', 'Horror', 'Drama', '80s', 'Mystery'],
     ),
   ];
+
+
+
+  static List<String> contentTagsList = ['Sci-Fi', 'Horror', 'Drama', '80s', 'Mystery'];
 }

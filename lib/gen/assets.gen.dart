@@ -33,6 +33,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/add_icon.svg
   String get addIcon => 'assets/icons/add_icon.svg';
 
+  /// File path: assets/icons/bookmark_icon_with_plus.svg
+  String get bookmarkIconWithPlus => 'assets/icons/bookmark_icon_with_plus.svg';
+
   /// File path: assets/icons/bookmarks_icon.svg
   String get bookmarksIcon => 'assets/icons/bookmarks_icon.svg';
 
@@ -84,6 +87,7 @@ class $AssetsIconsGen {
   /// List of all assets
   List<String> get values => [
     addIcon,
+    bookmarkIconWithPlus,
     bookmarksIcon,
     checkBoxSelectedIcon,
     eyeOpen,
@@ -118,6 +122,10 @@ class $AssetsImagesGen {
   AssetGenImage get backgroundImage =>
       const AssetGenImage('assets/images/background_image.png');
 
+  /// File path: assets/images/movie_Image.png
+  AssetGenImage get movieImage =>
+      const AssetGenImage('assets/images/movie_Image.png');
+
   /// File path: assets/images/onboarding_body_image_four.png
   AssetGenImage get onboardingBodyImageFour =>
       const AssetGenImage('assets/images/onboarding_body_image_four.png');
@@ -143,6 +151,7 @@ class $AssetsImagesGen {
     addImageOne,
     appMiniIcon,
     backgroundImage,
+    movieImage,
     onboardingBodyImageFour,
     onboardingBodyImageOne,
     onboardingBodyImageThree,

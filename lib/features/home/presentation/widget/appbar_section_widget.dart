@@ -5,6 +5,7 @@ import 'package:movie_rating_application/features/home/presentation/widget/show_
 
 import '../../../../constants/text_font_style.dart';
 import '../../../../custom_widgets/app_logo_widget.dart';
+import '../../../../custom_widgets/profile_image_widget.dart';
 import '../../../../gen/assets.gen.dart';
 import '../../../../gen/colors.gen.dart';
 import '../../../../helper/logger_util.dart';
@@ -51,24 +52,14 @@ class _AppbarSectionWidgetState extends State<AppbarSectionWidget>
           children: [
             SvgPicture.asset(Assets.icons.notificationIcon),
             UIHelper.horizontalSpace(10.w),
+
+
+            ///---------->>>> Section : Profile Imag Widget
             GestureDetector(
               onTap: () {
                 showOverlay();
               },
-              child: Container(
-                padding: EdgeInsets.all(1.sp),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: AppColors.cFFFFFF),
-                ),
-                child: CircleAvatar(
-                  radius: 30.r,
-                  backgroundColor: AppColors.scaffoldBackgroundColor,
-                  backgroundImage: AssetImage(
-                    Assets.images.onboardingBodyImageOne.path,
-                  ),
-                ),
-              ),
+              child: ProfileImageWidget(),
             ),
           ],
         ),
@@ -413,3 +404,5 @@ class _AppbarSectionWidgetState extends State<AppbarSectionWidget>
     super.dispose();
   }
 }
+
+

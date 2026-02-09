@@ -2,6 +2,8 @@ class ContentCardModel {
   final String imageUrl;
   final String contentName;
   final String contentType;
+  final double rating;
+  final double circularProgressRating;
   final String contentLifeCycleStarted;
   final String contentLifeCycleEnded;
   final String contentDuration;
@@ -15,5 +17,7 @@ class ContentCardModel {
     required this.contentLifeCycleEnded,
     required this.contentDuration,
     required this.contentTagsList,
+    required this.rating,
+    required this.circularProgressRating,
   });
 }
